@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<configuration>
+  <!-- Число реплик каждого блока -->
+  <property>
+    <name>dfs.replication</name>
+    <value>${REPLICATION}</value>
+  </property>
+
+  <!-- Метаданные NameNode (fsimage, edits) -->
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file://${DATA_DIR}/namenode</value>
+  </property>
+
+  <!-- Контрольные точки Secondary NameNode -->
+  <property>
+    <name>dfs.namenode.checkpoint.dir</name>
+    <value>file://${DATA_DIR}/secondary</value>
+  </property>
+
+  <!-- Блоки DataNode -->
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file://${DATA_DIR}/datanode</value>
+  </property>
+
+  <!-- Узел, на котором start-dfs.sh запускает Secondary NameNode -->
+  <property>
+    <name>dfs.namenode.secondary.http-address</name>
+    <value>${NAMENODE}:9868</value>
+  </property>
+</configuration>
