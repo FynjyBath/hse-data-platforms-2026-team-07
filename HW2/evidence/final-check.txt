@@ -1,0 +1,255 @@
+
+=== Процессы
+team-07-nn
+nodemanager is running as process 116825.
+resourcemanager is running as process 116558.
+historyserver is running as process 116666.
+118257 Jps
+106145 NameNode
+106290 DataNode
+116825 NodeManager
+106489 SecondaryNameNode
+116666 JobHistoryServer
+116558 ResourceManager
+/opt/hadoop/etc/hadoop/core-site.xml: OK
+/opt/hadoop/etc/hadoop/hdfs-site.xml: OK
+/opt/hadoop/etc/hadoop/hadoop-env.sh: OK
+team-07-00
+nodemanager is running as process 106362.
+100593 DataNode
+106935 Jps
+106362 NodeManager
+/opt/hadoop/etc/hadoop/core-site.xml: OK
+/opt/hadoop/etc/hadoop/hdfs-site.xml: OK
+/opt/hadoop/etc/hadoop/hadoop-env.sh: OK
+team-07-01
+nodemanager is running as process 106381.
+106996 Jps
+100797 DataNode
+106381 NodeManager
+/opt/hadoop/etc/hadoop/core-site.xml: OK
+/opt/hadoop/etc/hadoop/hdfs-site.xml: OK
+/opt/hadoop/etc/hadoop/hadoop-env.sh: OK
+
+=== HDFS и зарегистрированные узлы YARN
+Configured Capacity: 152652324864 (142.17 GB)
+Present Capacity: 140675645440 (131.01 GB)
+DFS Remaining: 140673998848 (131.01 GB)
+DFS Used: 1646592 (1.57 MB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 10.7.0.11:9866 (team-07-nn)
+Hostname: team-07-nn
+Decommission Status : Normal
+Configured Capacity: 50884108288 (47.39 GB)
+DFS Used: 548864 (536 KB)
+Non DFS Used: 3984355328 (3.71 GB)
+DFS Remaining: 46882426880 (43.66 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 92.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 11 19:54:46 UTC 2026
+Last Block Report: Sun Oct 11 17:51:27 UTC 2026
+Num of Blocks: 6
+
+
+Name: 10.7.0.12:9866 (team-07-00)
+Hostname: team-07-00
+Decommission Status : Normal
+Configured Capacity: 50884108288 (47.39 GB)
+DFS Used: 548864 (536 KB)
+Non DFS Used: 3968765952 (3.70 GB)
+DFS Remaining: 46898016256 (43.68 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 92.17%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 11 19:54:47 UTC 2026
+Last Block Report: Sun Oct 11 16:43:32 UTC 2026
+Num of Blocks: 6
+
+
+Name: 10.7.0.13:9866 (team-07-01)
+Hostname: team-07-01
+Decommission Status : Normal
+Configured Capacity: 50884108288 (47.39 GB)
+DFS Used: 548864 (536 KB)
+Non DFS Used: 3973226496 (3.70 GB)
+DFS Remaining: 46893555712 (43.67 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 92.16%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 11 19:54:47 UTC 2026
+Last Block Report: Sun Oct 11 19:41:59 UTC 2026
+Num of Blocks: 6
+
+
+2026-10-11 19:54:49,728 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at team-07-nn/10.7.0.11:8032
+Total Nodes:3
+         Node-Id	     Node-State	Node-Http-Address	Number-of-Running-Containers
+team-07-00:35247	        RUNNING	  team-07-00:8042	                           0
+team-07-01:33409	        RUNNING	  team-07-01:8042	                           0
+team-07-nn:39701	        RUNNING	  team-07-nn:8042	                           0
+{
+  "appsSubmitted": 1,
+  "appsCompleted": 1,
+  "appsPending": 0,
+  "appsRunning": 0,
+  "appsFailed": 0,
+  "appsKilled": 0,
+  "reservedMB": 0,
+  "availableMB": 5120,
+  "allocatedMB": 0,
+  "pendingMB": 0,
+  "reservedVirtualCores": 0,
+  "availableVirtualCores": 6,
+  "allocatedVirtualCores": 0,
+  "pendingVirtualCores": 0,
+  "containersAllocated": 0,
+  "containersReserved": 0,
+  "containersPending": 0,
+  "totalMB": 5120,
+  "utilizedMB": 0,
+  "totalVirtualCores": 6,
+  "utilizedVirtualCores": 1,
+  "utilizedMBPercent": 42,
+  "utilizedVirtualCoresPercent": 16,
+  "rmSchedulerBusyPercent": 0,
+  "totalNodes": 3,
+  "lostNodes": 0,
+  "unhealthyNodes": 0,
+  "decommissioningNodes": 0,
+  "decommissionedNodes": 0,
+  "rebootedNodes": 0,
+  "activeNodes": 3,
+  "shutdownNodes": 0,
+  "containerAssignedPerSecond": 0,
+  "totalUsedResourcesAcrossPartition": {
+    "memory": 0,
+    "vCores": 0,
+    "resourceInformations": {
+      "resourceInformation": [
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "memory-mb",
+          "resourceType": "COUNTABLE",
+          "units": "Mi",
+          "value": 0
+        },
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "vcores",
+          "resourceType": "COUNTABLE",
+          "units": "",
+          "value": 0
+        }
+      ]
+    }
+  },
+  "totalClusterResourcesAcrossPartition": {
+    "memory": 5120,
+    "vCores": 6,
+    "resourceInformations": {
+      "resourceInformation": [
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "memory-mb",
+          "resourceType": "COUNTABLE",
+          "units": "Mi",
+          "value": 5120
+        },
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "vcores",
+          "resourceType": "COUNTABLE",
+          "units": "",
+          "value": 6
+        }
+      ]
+    }
+  },
+  "totalReservedResourcesAcrossPartition": {
+    "memory": 0,
+    "vCores": 0,
+    "resourceInformations": {
+      "resourceInformation": [
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "memory-mb",
+          "resourceType": "COUNTABLE",
+          "units": "Mi",
+          "value": 0
+        },
+        {
+          "attributes": {},
+          "maximumAllocation": 9223372036854775807,
+          "minimumAllocation": 0,
+          "name": "vcores",
+          "resourceType": "COUNTABLE",
+          "units": "",
+          "value": 0
+        }
+      ]
+    }
+  },
+  "totalAllocatedContainersAcrossPartition": 0,
+  "crossPartitionMetricsAvailable": true,
+  "rmEventQueueSize": 0,
+  "schedulerEventQueueSize": 0
+}
+
+=== HTTP всех внутренних интерфейсов
+team-07-nn:8088/cluster HTTP 200
+team-07-nn:19888/jobhistory HTTP 200
+team-07-nn:9870/dfshealth.html HTTP 200
+team-07-nn:9868/ HTTP 200
+team-07-nn:8042/node HTTP 200
+team-07-00:8042/node HTTP 200
+team-07-01:8042/node HTTP 200
+team-07-nn:9864/datanode.html HTTP 200
+team-07-00:9864/datanode.html HTTP 200
+team-07-01:9864/datanode.html HTTP 200
+
+=== Пароль на внешнем прокси
+Без пароля: HTTP 401
+Проверка с паролем и внешнего доступа выполняется с компьютера вне кластера.

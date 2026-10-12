@@ -1,0 +1,4 @@
+.secrets/
+*.password
+WEB-ACCESS.txt
+__pycache__/

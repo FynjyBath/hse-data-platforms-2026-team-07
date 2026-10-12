@@ -1,0 +1,78 @@
+{
+  "checked_from": "user Mac, outside cluster",
+  "connection": "SSH tunnel",
+  "interfaces": [
+    {
+      "url": "http://127.0.0.1:8088/cluster",
+      "status": 200,
+      "bytes": 14637,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:19888/jobhistory",
+      "status": 200,
+      "bytes": 8033,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:9870/dfshealth.html",
+      "status": 200,
+      "bytes": 18995,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:9868/",
+      "status": 200,
+      "bytes": 1083,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:18041/node",
+      "status": 200,
+      "bytes": 6578,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:18042/node",
+      "status": 200,
+      "bytes": 6578,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:18043/node",
+      "status": 200,
+      "bytes": 6578,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:19861/datanode.html",
+      "status": 200,
+      "bytes": 4750,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:19862/datanode.html",
+      "status": 200,
+      "bytes": 4750,
+      "html": true,
+      "internal_absolute_links": false
+    },
+    {
+      "url": "http://127.0.0.1:19863/datanode.html",
+      "status": 200,
+      "bytes": 4750,
+      "html": true,
+      "internal_absolute_links": false
+    }
+  ],
+  "without_password": 401,
+  "POST_with_password": 403
+}
