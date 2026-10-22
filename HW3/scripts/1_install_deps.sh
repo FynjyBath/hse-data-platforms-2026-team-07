@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 source "$(dirname "$0")/../common.sh"
 
+# ставим джаву и постгрес
 step "Установка Java 11 и PostgreSQL"
 sudo apt-get update -qq
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -y -qq openjdk-11-jdk postgresql postgresql-contrib
 sudo systemctl enable --now postgresql
 
+# создаем пользователя и базу для метастора
 step "Создание БД и пользователя Metastore"
 sudo -u postgres psql <<SQL
 DO \$\$ BEGIN
