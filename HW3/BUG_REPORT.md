@@ -1,5 +1,7 @@
-В ходе выполнения задания были написаны скрипты для автоматизированного развертывания Hive 4.0.0-alpha-2. PostgreSQL и Hive Metastore успешно запустились на порту 9083, однако HiveServer2 завис на этапе инициализации и не открыл порт 10000. 
+HiveServer2 не открывал порт 10000: главный поток бесконечно ждал в `HiveServer2.startHiveServer2`, потому что каждая попытка запуска завершалась ошибкой и сервер уходил на повтор через 60 секунд. Настоящая причина нашлась в `/tmp/$USER/hive.log`, а не в `hiveserver2.log`:
 
-При анализе логов было замечено циклическое создание сессий и ошибка Log4j2, а дамп потоков через jstack показал, что главный поток ушел в бесконечное ожидание в методе startHiveServer2. Для решения проблемы были перепробованы разные варианты конфигурации: увеличение выделяемой памяти, отключение Web UI и Zookeeper, а также смена движка на MapReduce и настройка прав в HDFS. 
+1. `Not authorized to make the get_notification_events_count call` — Metastore отклонял `get_current_notificationEventId` от пользователя `team`. Решение: `hive.metastore.event.db.notification.api.auth=false`.
+2. После этого при подключении появлялась ошибка `User: team is not allowed to impersonate team`. Решение: `hive.server2.enable.doAs=false`, чтобы запросы выполнялись от пользователя, под которым работает HiveServer2.
+3. `Permission denied: user=team, access=WRITE, inode="/tmp"` — в HDFS не было `/tmp/hive`. Каталоги теперь создаются в `scripts/5_start_services.sh`.
 
-Несмотря на все попытки, порт так и не поднялся, что указывает на баг самой альфа-версии дистрибутива, связанный с библиотекой логирования. При запуске этих же скриптов на стабильной версии Hive работа должна пройти штатно.
+Кроме того, `hive.execution.engine=mr` нужен, потому что Tez не установлен, а переменные из `config.env` теперь экспортируются, чтобы `envsubst` подставлял их в `hive-site.xml`.

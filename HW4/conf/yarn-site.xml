@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<configuration>
+  <property><name>yarn.resourcemanager.hostname</name><value>${RESOURCEMANAGER}</value></property>
+</configuration>

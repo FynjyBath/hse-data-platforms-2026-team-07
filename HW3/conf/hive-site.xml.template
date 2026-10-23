@@ -5,7 +5,7 @@
   </property>
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:postgresql://${METASTORE_HOST}:5432/${POSTGRES_DB}</value>
+    <value>jdbc:postgresql://localhost:5432/${POSTGRES_DB}</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
@@ -42,5 +42,17 @@
   <property>
     <name>hive.exec.dynamic.partition.mode</name>
     <value>nonstrict</value>
+  </property>
+  <property>
+    <name>hive.execution.engine</name>
+    <value>mr</value>
+  </property>
+  <property>
+    <name>hive.metastore.event.db.notification.api.auth</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hive.server2.enable.doAs</name>
+    <value>false</value>
   </property>
 </configuration>

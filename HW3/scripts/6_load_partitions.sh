@@ -23,7 +23,7 @@ step "Автоматическая загрузка партиций"
 for dir in $(hdfs dfs -ls /user/team/data/logs | awk '/dt=/{print $NF}'); do
   dt=$(basename "$dir" | cut -d= -f2)
   info "Загружаем партицию dt=$dt из $dir"
-  "${BEELINE[@]}" -e "LOAD DATA INPATH '$dir' INTO TABLE web_logs PARTITION (dt='$dt');"
+  "${BEELINE[@]}" -e "LOAD DATA INPATH '$dir' OVERWRITE INTO TABLE web_logs PARTITION (dt='$dt');"
 done
 
 # проверяем что все загрузилось
